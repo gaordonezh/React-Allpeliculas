@@ -1,0 +1,25 @@
+footer {
+  margin-top: 50px;
+  padding: 25px 0;
+  background-color: #000;
+  .footer {
+    .redes {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      .MuiSvgIcon-root {
+        fill: rgba(255, 255, 255, 0.7);
+        margin: 0 20px;
+        cursor: pointer;
+        transform: scale(1.5);
+
+        &:hover{
+          box-shadow: 1px 5px 20px 1px rgb(234, 0, 80);
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

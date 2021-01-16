@@ -1,0 +1,15 @@
+.notFound{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #FEFEFE;
+
+    img{
+        margin-bottom: 50px;
+        max-width: 500px;
+        min-width: 300px;
+    }
+}

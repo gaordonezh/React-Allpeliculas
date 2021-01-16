@@ -1,0 +1,43 @@
+.contenido{
+  margin-top: 90px !important;
+}
+h1{
+  color: green
+}
+.titulo{
+  width: 100%;
+
+  .buscador{
+    width: calc(100% - 60px);
+  }
+
+  .icon_close{
+    margin-left: 20px;
+  }
+}
+
+.root {
+  display: flex;
+  height: 200px;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}
+.cover {
+  width: 250px;
+}
+.chip{
+  margin: 2px
+}
+.empty{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+  width: 100vw;
+}
