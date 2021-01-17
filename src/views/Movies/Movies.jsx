@@ -85,16 +85,24 @@ export default () => {
               <PlayCircleOutlineIcon />{" "}
             </Button>
           </Typography>
-          
+
           <Typography variant="body1" style={{ color: "#fff" }}>
             {movie.overview}
           </Typography>
-          <span className="description_last" style={{ color: "#fff", margin:'20px 0' }}>
+          <span
+            className="description_last"
+            style={{ color: "#fff", margin: "20px 0" }}
+          >
             {movie.tagline}{" "}
             {movie.homepage && (
-                <Button href={movie.homepage} variant="outlined" color="secondary" target="_blank">
-                  Ver Película <OpenInNewIcon />
-                </Button>
+              <Button
+                href={movie.homepage}
+                variant="outlined"
+                color="secondary"
+                target="_blank"
+              >
+                Ver Película <OpenInNewIcon />
+              </Button>
             )}
           </span>
           <Grid container spacing={2}>
@@ -158,17 +166,19 @@ function Trailer(props) {
       onClose={() => setVisibleModal(false)}
       classes={{ paper: classes.dialogPaper }}
     >
-      <iframe
-        className={classes.video}
-        src={
-          videoInfo.site == "YouTube"
-            ? `https://www.youtube.com/embed/${videoInfo.key}`
-            : `https://player.vimeo.com/video/${videoInfo.key}`
-        }
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      />
+      {videoInfo && (
+        <iframe
+          className={classes.video}
+          src={
+            videoInfo.site == "YouTube"
+              ? `https://www.youtube.com/embed/${videoInfo.key}`
+              : `https://player.vimeo.com/video/${videoInfo.key}`
+          }
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        />
+      )}
     </Dialog>
   );
 }
